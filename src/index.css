@@ -1,0 +1,43 @@
+:root {
+  --color-accent: #00adb5;
+  --color-primary: #222831;
+  --color-secondary: #393e46;
+  --color-soft-white: #eeeeee;
+  --color-soft-effects: #a3e4e7;
+  --color-soft-shadow: #1b2025;
+}
+* {
+  background-color: var(--color-primary);
+  color: var(--color-soft-white);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+button {
+  background-color: var(--color-accent);
+}
+section {
+  background-color: var(--color-secondary);
+}
+p {
+  font-size: 1rem;
+  left: 1.5rem;
+}
+p.small {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-style: 700;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+h2 {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
