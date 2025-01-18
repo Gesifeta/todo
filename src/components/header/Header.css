@@ -16,7 +16,11 @@ header {
   display: flex;
   align-items: center;
   gap: 1rem;
+  border-radius: 50%;
   cursor: pointer;
+}
+.logo img{
+  border-radius: 50%;
 }
 .nav-header ul {
   display: flex;
@@ -46,12 +50,8 @@ header {
     left: 0;
     align-items: flex-start;
   }
-  .logo {
+  .logo img{
     display: none;
-    max-width: 25px;
-  }
-  .logo img {
-    width: 100%;
   }
   .menu {
     display: flex;
