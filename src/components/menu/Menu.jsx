@@ -6,10 +6,17 @@ const Menu = ({ showNav, setShowNav }) => {
   let middleLine = document.querySelector(".middle");
   useEffect(() => {
     menu = document.querySelector(".menu");
+   
     middleLine = document.querySelector(".middle");
     // To change the upper and bottom line to X
   }, []);
-
+ // Remove header navigation bar when the screen width is less than 600px
+ let navbar= document.querySelector(".nav-header");
+ navbar?.addEventListener("mouseleave",()=>{
+   if(window.innerWidth <=600){
+     setShowNav(false);
+   }
+ })
   // To change the upper and bottom line to X
   const changeMenu = () => {
     menu?.firstElementChild.classList.toggle("rotate45Degree");

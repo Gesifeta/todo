@@ -31,6 +31,7 @@ header {
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
+
 .nav-header ul li:hover {
   background-color: var(--color-soft-effects);
   color: var(--color-primary);
@@ -46,9 +47,11 @@ header {
   }
   .nav-header {
     position: absolute;
+    background-color: var(--color-accent-light);
     top: 6rem;
     left: 0;
     align-items: flex-start;
+    z-index: 6;
   }
   .logo img{
     display: none;

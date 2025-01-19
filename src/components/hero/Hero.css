@@ -1,0 +1,44 @@
+.container-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+.hero {
+  display: flex;
+  max-height: 100%;
+  min-width: 80vh;
+}
+.container-hero h1 {
+  position: absolute;
+  top: 12%;
+  width: 60%;
+  text-align: center;
+  font-weight: 900;
+}
+.hero-left,
+.hero-right {
+  min-height: 90vh;
+  min-width: 50vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.hero-right {
+  background-image: url("assets/bulb.jpg");
+  height: 100%;
+}
+.hero-left {
+  background-image: url("assets/today.jpg");
+  height: 100%;
+}
+
+@media only screen and (max-width:600px) {
+  .hero{
+    display: block;
+  }
+  .hero-left {
+    display: none;
+  }
+}
