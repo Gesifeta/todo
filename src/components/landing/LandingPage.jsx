@@ -1,15 +1,15 @@
 import React from "react";
 
-import "./Hero.css";
+import "./LandingPage.css";
 
-const Hero = () => {
+const LandingPage = () => {
   return (
+    
     <section className="container-hero">
       <h1>Manage your tasks on time and easily.</h1>
       <div className="hero">
         <div className="hero-left">
                   <p>
-          
           </p>
         </div>
         <div className="hero-right">
@@ -23,4 +23,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default LandingPage;

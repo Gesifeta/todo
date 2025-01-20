@@ -47,7 +47,7 @@ header {
   }
   .nav-header {
     position: absolute;
-    background-color: var(--color-accent-light);
+    background-color: var(--color-secondary);
     top: 6rem;
     left: 0;
     align-items: flex-start;

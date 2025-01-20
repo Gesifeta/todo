@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Menu from "../menu/Menu.jsx";
 import "./Header.css";
@@ -21,7 +22,7 @@ const Header = () => {
     <header>
       <div className="container-logo">
         <div className="logo">
-        <img src="/todo-logo.jpg" alt="logo" width={40} />
+          <img src="/todo-logo.jpg" alt="logo" width={40} />
         </div>
         <Menu showNav={showNav} setShowNav={setShowNav} />
       </div>
@@ -35,8 +36,13 @@ const Header = () => {
           </ul>
           <div className="access">
             <div className="btn-group">
-              <button className="btn btn-signup">Sign Up</button>
-              <button className="btn btn-login">Login</button>
+              <button className="btn btn-signup">
+                <a href="/user/new">Sign Up</a>
+              </button>
+
+              <button className="btn btn-login">
+                <a href="/user/login">Login</a>
+              </button>
             </div>
           </div>
         </nav>

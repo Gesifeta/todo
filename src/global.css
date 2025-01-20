@@ -60,13 +60,15 @@ select {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   appearance: none;
+  color: var(--color-neutral-dark);
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: var(--color-accent-secondary);
+  border: 1px solid lightgreen;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  transform: scale(.98);
 }
 
 /* Styling for Select */
@@ -107,7 +109,9 @@ input[type="file"] {
 
 .btn-group {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: auto;
+  max-width: 50%;
   gap: 0.5rem;
 }
 .btn-cta {
@@ -115,6 +119,7 @@ input[type="file"] {
   bottom: 17%;
   left: 50%;
   transform: translate(-50%);
+  color: var(--color-neutral-light);
   font-size: 2rem;
   border-radius: 5rem;
   padding: 0.75rem 2rem;
@@ -122,8 +127,23 @@ input[type="file"] {
 .btn-cta:active {
   transform: translate(-50%) scale(0.97);
 }
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+form .btn-group {
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+@media only screen and (max-width:600px){
+  .btn-group{
+    min-width: 90%;
   }
 }
