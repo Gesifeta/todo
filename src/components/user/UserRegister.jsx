@@ -31,7 +31,7 @@ const UserRegister = () => {
             <button type="submit" className="btn-primary">
               Register
             </button>
-            <button type="button" className="btn-secondary">
+            <button type="button" className="btn-secondary" onClick={()=>window.location.pathname="/"}>
               Cancel
             </button>
           </div>

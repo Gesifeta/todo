@@ -25,6 +25,4 @@
 .rotateMinus45Degree {
   transform: translateY(-10px) rotate(-45deg);
 }
-.hide {
-  display: none;
-}
+

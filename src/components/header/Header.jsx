@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
 import Menu from "../menu/Menu.jsx";
 import "./Header.css";
@@ -15,9 +14,20 @@ const Header = () => {
     if (triggerPoint > 600) {
       setShowNav(true);
     } else {
-      setShowNav(false);
+      setShowNav(false);  console.log("clicked");
     }
   });
+  // remove navigation bar when child element clicked
+  useEffect(() => {
+    let navigations = document.querySelectorAll(".nav");
+    navigations?.forEach((navigation) => {
+      navigation?.addEventListener("click", () => {
+        setShowNav(false);
+      
+      });
+    });
+  }, [showNav]);
+ 
   return (
     <header>
       <div className="container-logo">
@@ -31,18 +41,19 @@ const Header = () => {
         <nav className="nav-header">
           <ul>
             {["About", "Service", "Pricing", "Support"].map((nav, index) => (
-              <li key={`${nav}-${index}`}>{nav}</li>
+              <li className="nav" key={`${nav}-${index}`}>
+                {nav}
+              </li>
             ))}
           </ul>
           <div className="access">
             <div className="btn-group">
-              <button className="btn btn-signup">
-                <a href="/user/new">Sign Up</a>
-              </button>
-
-              <button className="btn btn-login">
-                <a href="/user/login">Login</a>
-              </button>
+              <a href="/user/new">
+                <button className="btn btn-signup">Sign Up</button>
+              </a>
+              <a href="/user/login">
+                <button className="btn btn-login">Login</button>
+              </a>
             </div>
           </div>
         </nav>

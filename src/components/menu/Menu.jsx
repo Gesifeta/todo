@@ -9,7 +9,7 @@ const Menu = ({ showNav, setShowNav }) => {
    
     middleLine = document.querySelector(".middle");
     // To change the upper and bottom line to X
-  }, []);
+  }, [showNav]);
  // Remove header navigation bar when the screen width is less than 600px
  let navbar= document.querySelector(".nav-header");
  navbar?.addEventListener("mouseleave",()=>{
