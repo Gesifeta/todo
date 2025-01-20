@@ -17,7 +17,7 @@ const LandingPage = () => {
          
           </p>
         </div>
-        <button className="btn-cta">Get Started</button>
+      <a href="/home"> <button className="btn-cta">Get Started</button></a> 
       </div>
     </section>
   );

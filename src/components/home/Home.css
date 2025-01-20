@@ -12,16 +12,24 @@
     "sidebar-left task-upcoming task-upcoming";
   min-height: 100vh;
 }
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 .sidebar-left {
   background-color: var(--color-neutral-light);
   padding: 1rem 0.5rem;
   display: flex;
   flex-direction: column;
   grid-area: sidebar-left;
+  gap: 0.75rem;
   align-items: flex-start;
   width: 100%;
   min-height: 100vh;
-  
+}
+.sidebar-left-icon {
+  color: var(--color-accent);
 }
 .sidebar-left ul {
   display: flex;
@@ -29,11 +37,19 @@
   gap: 1rem;
 }
 .sidebar-left li {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.sidebar-left li:hover {
+  background-color: var(--color-soft-white);
+}
+.sidebar-left span {
   color: var(--color-neutral-dark);
 }
 .sidebar-left h3 {
   color: var(--color-accent-light);
-  border-bottom: solid;
+
   margin-bottom: 0.5rem;
 }
 .sidebar-right {
@@ -41,7 +57,8 @@
   flex-direction: column;
   grid-area: sidebar-right;
   height: 100%;
-  background-color: var(--color-accent-light);
+  width: 100%;
+  background-color: var(--color-soft-shadow);
   padding: 1rem 0.5rem;
 }
 .search-bar {
@@ -50,6 +67,12 @@
   grid-area: search-bar;
   min-width: 100%;
 }
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  transform: translateY(-30%);
+}
 .search-bar input {
   align-self: center;
   margin: auto;
@@ -57,6 +80,7 @@
   width: 80%;
 }
 .task-area {
+  border-radius: 5px;
   grid-area: task-area;
   background-color: #6c7777;
   width: 100%;
@@ -66,4 +90,23 @@
   grid-area: task-upcoming;
   width: 100%;
   padding: 1rem 0.5rem;
+}
+.task {
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr;
+  justify-content: space-around;
+  padding: .5rem;
+}
+.task-detail ul{
+  background-color: var(--color-soft-white);
+  border-radius: 5px;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.task-detail ul li {
+  display: flex;
+  color: var(--color-neutral-dark);
+  justify-content: space-between;
 }

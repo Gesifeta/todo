@@ -1,7 +1,5 @@
 import { Outlet } from "react-router-dom";
 
-import Header from "./components/header/Header";
-import Hero from "./components/landing/LandingPage";
 import LandingPage from "./components/landing/LandingPage";
 
 function App() {

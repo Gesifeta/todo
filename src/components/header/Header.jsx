@@ -14,7 +14,7 @@ const Header = () => {
     if (triggerPoint > 600) {
       setShowNav(true);
     } else {
-      setShowNav(false);  console.log("clicked");
+      setShowNav(false);
     }
   });
   // remove navigation bar when child element clicked
@@ -22,7 +22,7 @@ const Header = () => {
     let navigations = document.querySelectorAll(".nav");
     navigations?.forEach((navigation) => {
       navigation?.addEventListener("click", () => {
-        setShowNav(false);
+       triggerPoint < 600 && setShowNav(false);
       
       });
     });
