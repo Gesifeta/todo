@@ -12,6 +12,18 @@
     "sidebar-left task-upcoming task-upcoming";
   min-height: 100vh;
 }
+.container-day{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-accent);
+  align-items: center;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 4rem;
+  margin: 1rem;
+}
 .nav-list {
   display: flex;
   align-items: center;
@@ -90,20 +102,48 @@
   grid-area: task-upcoming;
   width: 100%;
   padding: 1rem 0.5rem;
+  margin-top: 1rem;
+}
+.task-upcoming h2 {
+  margin-bottom: 1rem;
+}
+.task-upcoming .task {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.task-status {
+  display: flex;
+ align-items: center; 
+}
+.task-icon{
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.task-upcoming .task h4 {
+  background-color: var(--color-soft-white);
+  border-radius: 10px;
+  color: var(--color-accent);
+  padding: 1rem;
 }
 .task {
   display: grid;
   grid-template-columns: 1fr 4fr 4fr;
   justify-content: space-around;
-  padding: .5rem;
+  padding: 0.5rem;
 }
-.task-detail ul{
+.task-list .task{
+  gap: 1rem;
+}
+.task-detail ul {
   background-color: var(--color-soft-white);
   border-radius: 5px;
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: .25rem;
+  gap: 0.25rem;
 }
 .task-detail ul li {
   display: flex;

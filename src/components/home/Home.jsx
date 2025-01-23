@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import {
   Activity,
+  Circle,
   CircleCheck,
+  CircleCheckBig,
   CircleDashed,
   ListStart,
   ListTodo,
@@ -14,6 +16,8 @@ import { users, tasks, progresses } from "../../data/data.js";
 import "./Home.css";
 
 const Home = () => {
+  const [taskComplete,setTaskComplete]=useState(false)
+  const [day,setDay]=useState("")
   const [todayTasks, setTodayTasks] = useState([]);
   const [upComingTasks, setUpComingTasks] = useState([]);
   const [progressTasks, setProgressTasks] = useState([]);
@@ -25,7 +29,11 @@ const Home = () => {
     setTodayTasks(todayTasks);
     // Filter upcoming tasks for the week
 
-    const upcomingTasks = tasks.filter((task) => task.dayNumber > today);
+    const comingTasks = tasks.filter(
+      (task) => today < task.dayNumber && task.dayNumber < today + 7
+    );
+    setUpComingTasks(comingTasks);
+   setDay(today)
   }, []);
   return (
     <section className="home">
@@ -73,12 +81,12 @@ const Home = () => {
           {todayTasks.map((task, index) => (
             <div className="task" key={`${task._id}-${index}`}>
               <div className="task-status">
+               {taskComplete?
                 <span className="task-icon">
-                  <CircleDashed color="var(--color-accent)" />
-                </span>
-                <span className="task-icon">
-                  <MonitorCheck color="var(--success-color)" />
-                </span>
+                  <Circle color="var(--color-accent)" onClick={()=>setTaskComplete(!taskComplete)} />
+                </span>: <span className="task-icon">
+                  <CircleCheckBig color="var(--success-color)" onClick={()=>setTaskComplete(!taskComplete)}  />
+                </span>}
               </div>
               <h4>{task.description}</h4>
               <div className="task-detail">
@@ -100,7 +108,18 @@ const Home = () => {
         </div>
       </div>
       <div className="sidebar-right">
-        <h3>Up-comming tasks</h3>
+        <div className="nav-list">
+          <h3>PROGRESS</h3>
+          <span className="nav-icon">
+            <MonitorCheck color="var(--success-color)" />
+          </span>
+     
+        </div>
+       <div className="container-day">
+        <span>Day</span>
+      <span className="task-day"> {day}</span>
+     </div>
+        <h3>Up-comming Tasks</h3>
         {["Progress", "Completed", "Inprogress", "Note Started"].map(
           (activity, index) => (
             <li key={`${activity}-${index}`}>{activity}</li>
@@ -108,7 +127,19 @@ const Home = () => {
         )}
       </div>
       <div className="task-upcoming">
-        <h2>Up coming tasks</h2>
+        <h2>Up coming Activities</h2>
+        <div className="task-list">
+          {upComingTasks.map((task, index) => (
+            <div className="task" key={`${task._id}-${index}`}>
+              <div className="task-status">
+                <span className="task-icon">
+                 Day {task.dayNumber}
+                </span>
+              </div>
+              <h4>{task.description}</h4>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
