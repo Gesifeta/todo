@@ -67,11 +67,15 @@
 .sidebar-right {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   grid-area: sidebar-right;
   height: 100%;
-  width: 100%;
+  width: 95%;
   background-color: var(--color-soft-shadow);
-  padding: 1rem 0.5rem;
+  padding: 2rem 1rem;
+  margin-top: .5rem;
+  border-radius: 10px;
+  
 }
 .search-bar {
   display: flex;
@@ -96,12 +100,15 @@
   grid-area: task-area;
   background-color: #6c7777;
   width: 100%;
-  padding: 1rem 0.5rem;
+  padding: 2rem 1rem;
 }
 .task-upcoming {
+  background-color: var(--color-soft-shadow);
+  border-radius: 10px;
   grid-area: task-upcoming;
-  width: 100%;
-  padding: 1rem 0.5rem;
+  width: 95%;
+  padding: 2rem 1rem;
+  margin: auto;
   margin-top: 1rem;
 }
 .task-upcoming h2 {
