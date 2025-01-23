@@ -98,12 +98,17 @@
 .task-area {
   border-radius: 5px;
   grid-area: task-area;
-  background-color: #6c7777;
-  width: 100%;
+ background-color: var(--color-soft-white);
+ margin: auto;
+  width: 95%;
   padding: 2rem 1rem;
 }
+.task-area h3{
+  color: var(--color-neutral-dark);
+  margin-bottom: 1rem;
+}
 .task-upcoming {
-  background-color: var(--color-soft-shadow);
+  background-color: var(--color-soft-white);
   border-radius: 10px;
   grid-area: task-upcoming;
   width: 95%;
@@ -111,7 +116,8 @@
   margin: auto;
   margin-top: 1rem;
 }
-.task-upcoming h2 {
+.task-upcoming h2{
+  color: var(--color-neutral-dark);
   margin-bottom: 1rem;
 }
 .task-upcoming .task {
@@ -132,7 +138,7 @@
 .task-upcoming .task h4 {
   background-color: var(--color-soft-white);
   border-radius: 10px;
-  color: var(--color-accent);
+  color: var(--color-neutral-dark);
   padding: 1rem;
 }
 .task {
@@ -142,7 +148,12 @@
   padding: 0.5rem;
 }
 .task-list .task{
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: rgb(78, 77, 76);
   gap: 1rem;
+  padding: 1rem 2rem;
+
 }
 .task-detail ul {
   background-color: var(--color-soft-white);
