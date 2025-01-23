@@ -37,7 +37,7 @@ const Home = () => {
     // Filter today's task
     const mytasks = todaysActivities.map((data) => data.activities);
     setTaskInProgress(mytasks);
-    console.log(mytasks)
+    console.log(mytasks);
   }, []);
 
   return (
@@ -118,7 +118,7 @@ const Home = () => {
           <span>Day</span>
           <span className="task-day"> {day}</span>
         </div>
-        <h3>Overall Progress</h3>
+        <h3>Overall P</h3>
         <div className="task-detail">
           <ul>
             {taskInprogress?.map((mytask, index) => (
@@ -131,7 +131,6 @@ const Home = () => {
                 )}
               </li>
             ))}
-  
           </ul>
         </div>
       </div>
